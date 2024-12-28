@@ -1,126 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Original Social Media - Coming Soon</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YME Landing Page</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-        body {
-            background: linear-gradient(135deg, #060609, #000000);
-            color: white;
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            overflow: hidden;
-        }
+    body {
+      font-family: Arial, sans-serif;
+      height: 100vh;
+      background-color: #ff4d00;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      margin: 0;
+    }
 
-        .container {
-            text-align: center;
-            padding: 20px;
-        }
+    .logo {
+      font-size: 64px;
+      font-weight: bold;
+      color: white;
+      margin-top: 40vh;
+    }
 
-        h1 {
-            font-size: 2.5em;
-            margin-bottom: 20px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
+    .buttons {
+      width: 100%;
+    }
 
-        .coming-soon {
-            font-size: 1.8em;
-            margin-bottom: 40px;
-            opacity: 0;
-            animation: fadeIn 2s ease-in forwards;
-        }
+    .button {
+      display: block;
+      width: 100%;
+      padding: 20px;
+      text-align: center;
+      font-size: 18px;
+      font-weight: bold;
+      color: white;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+    }
 
-        .rocket {
-            font-size: 60px;
-            position: relative;
-            display: inline-block;
-            animation: rocketMove 4s infinite;
-        }
+    .login {
+      background-color: #f7da00;
+    }
 
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
+    .login:hover {
+      background-color: #E74C3C;
+    }
 
-        @keyframes rocketMove {
-            0% {
-                transform: translateY(0) rotate(-45deg);
-            }
-            50% {
-                transform: translateY(-20px) rotate(-45deg);
-            }
-            100% {
-                transform: translateY(0) rotate(-45deg);
-            }
-        }
+    .signup {
+      background-color: #3498DB;
+    }
 
-        .stars {
-            position: fixed;
-            width: 2px;
-            height: 2px;
-            background: white;
-            animation: starTwinkle 1s infinite;
-        }
-
-        @keyframes starTwinkle {
-            0% { opacity: 0; }
-            50% { opacity: 1; }
-            100% { opacity: 0; }
-        }
-
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 1.8em;
-            }
-            .coming-soon {
-                font-size: 1.4em;
-            }
-            .rocket {
-                font-size: 40px;
-            }
-        }
-    </style>
+    .signup:hover {
+      background-color: #2980B9;
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Welcome to Original Social Media</h1>
-        <div class="coming-soon">Website Coming Soon</div>
-        <div class="rocket">🚀</div>
-    </div>
-
-    <script>
-        // Create stars in the background
-        function createStars() {
-            for (let i = 0; i < 50; i++) {
-                const star = document.createElement('div');
-                star.className = 'stars';
-                star.style.left = Math.random() * window.innerWidth + 'px';
-                star.style.top = Math.random() * window.innerHeight + 'px';
-                star.style.animationDelay = Math.random() * 1 + 's';
-                document.body.appendChild(star);
-            }
-        }
-
-        // Create stars on load
-        createStars();
-
-        // Recreate stars when window is resized
-        window.addEventListener('resize', () => {
-            const stars = document.querySelectorAll('.stars');
-            stars.forEach(star => star.remove());
-            createStars();
-        });
-    </script>
+  <div class="logo">ydly</div>
+  <div class="buttons">
+    <a href="#" class="button login">LOG IN</a>
+    <a href="#" class="button signup">SIGN UP</a>
+  </div>
 </body>
 </html>
